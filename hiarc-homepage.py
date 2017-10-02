@@ -8,7 +8,7 @@ app = Flask(__name__)
 def apply_page():
     if request.method == 'POST':
         apply_form = request.form
-        http.post('http://lab.hi-arc.net/api/apply/new', data=apply_form)
+        http.post('http://lab.hi-arc.net/api/register/new', data=apply_form)
         
     return render_template('apply.html')
 
