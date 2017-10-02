@@ -1,0 +1,16 @@
+#logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    height: 2em;
+}
+
+nav {
+    float: right;
+    height: 2em;
+}
+
+#footer {
+    text-align: center;
+}

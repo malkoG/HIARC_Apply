@@ -1,0 +1,66 @@
+{% extends 'apply_layout.html' %}
+{% block title %}HI-ARC에 지원하세요!{% endblock %}
+{% block head %}
+<style>
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="apply-form">
+    <form class="form-horizontal" name="apply_form" method="POST" action="/apply">
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label" >이름</label>
+            </div>
+            <div class="col-9">
+                <input class="form-input" name="name" type="text" placeholder="이름을 적어주세요." />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label" >학과/학번</label>
+            </div>
+            <div class="col-9">
+                <input class="form-input" name="faculty" type="text" placeholder="ex. 컴퓨터공학과/B711XXX" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label" >핸드폰 번호</label>
+            </div> 
+            <div class="col-9">
+                <input class="form-input" name="phone" type="text" placeholder="ex. 010-XXXX-XXXX">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label" >Email</label>
+            </div>
+            <div class="col-9">
+                <input class="form-input" name="email" type="email" placeholder="이메일을 적어주세요" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label"  >Github/백준져지 계정</label>
+            </div>
+            <div class="col-9">
+                <input class="form-input" name="portfolio" type="text" placeholder="(3/4학년 해당) 운영중인 기술블로그라도 괜찮습니다." />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3">
+                <label class="form-label" >지원동기</label>
+            </div>
+            <div class="col-9">
+                <textarea class="form-input" name="comment" placeholder="ex. 재밌어보여서, 알고리즘 배우려고" rows="3"/>
+                </textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">제출</button> 
+    </form>
+</div>
+
+
+{% endblock %}
+

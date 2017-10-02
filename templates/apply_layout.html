@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />    
+    <link rel="stylesheet" href="{{ url_for('static', filename='apply_style.css') }}" />
+    {% endblock %}
+  </head>
+  <body>
+    <div id="header">{% block header %}{% endblock %}</div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2017 by <a href="//malkoG.github.io">Malko</a>
+      {% endblock %}
+    </div>
+  </body>
+</html>
